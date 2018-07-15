@@ -1,12 +1,16 @@
 
 <h1>《后端架构师技术图谱》</h1>
 
+![阿里巴巴集团长期内推，欢迎自荐，xingshaocheng@gmail.com](https://cdns.coderxing.com/HrUJ4G3E.png_700x700)
+
 [![知识共享协议（CC协议）](https://img.shields.io/badge/License-Creative%20Commons-DC3D24.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)
 [![GitHub stars](https://img.shields.io/github/stars/xingshaocheng/architect-awesome.svg?style=flat&label=Star)](https://github.com/xingshaocheng/architect-awesome/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/xingshaocheng/architect-awesome.svg?style=flat&label=Fork)](https://github.com/xingshaocheng/architect-awesome/fork)
 [![GitHub watchers](https://img.shields.io/github/watchers/xingshaocheng/architect-awesome.svg?style=flat&label=Watch)](https://github.com/xingshaocheng/architect-awesome/watchers)
 
-**更新于20180513**
+**更新于20180624**
+
+
 * [数据结构](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#数据结构)
 	* [队列](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#队列)
 	* [集合](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#集合)
@@ -49,6 +53,7 @@
 	* [最小生成树算法](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#最小生成树算法)
 	* [最短路径算法](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#最短路径算法)
 * [并发](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#并发)
+	* [Java 并发](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#java-并发)
 	* [多线程](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#多线程)
 	* [线程安全](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#线程安全)
 	* [一致性、事务](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#一致性事务)
@@ -302,6 +307,7 @@
 	* [敏捷开发](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#敏捷开发)
 	* [极限编程（XP）](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#极限编程xp)
 	* [结对编程](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#结对编程)
+	* [PDCA 循环质量管理](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#pdca-循环质量管理)
 	* [FMEA管理模式](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#fmea管理模式)
 * [通用业务术语](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#通用业务术语)
 * [技术趋势](https://github.com/xingshaocheng/architect-awesome/blob/master/README.md#技术趋势)
@@ -789,7 +795,7 @@ TODO
 
 ## AOP
 
-* [《轻松理解AOP(面向切面编程)》](https://my.oschina.net/yanquan345/blog/203415)
+* [《轻松理解AOP(面向切面编程)》](https://blog.csdn.net/yanquan345/article/details/19760027)
 * [《Spring AOP详解》](https://www.cnblogs.com/hongwz/p/5764917.html)
 * [《Spring AOP的实现原理》](http://www.importnew.com/24305.html)
 	* Spring AOP使用的动态代理，主要有两种方式：JDK动态代理和CGLIB动态代理。
@@ -1003,7 +1009,7 @@ APM —  Application Performance Management
 * [《四张图带你了解Tomcat系统架构》](https://blog.csdn.net/xlgen157387/article/details/79006434)
 
 * [《JBoss vs. Tomcat: Choosing A Java Application Server》](https://www.futurehosting.com/blog/jboss-vs-tomcat-choosing-a-java-application-server/)
-	* Tomcat 是轻量级的 Serverlet 容器，没有实现全部 JEE 特性（比如持久化和事务处理），但可以通过其他组件代替，比如Srping。
+	* Tomcat 是轻量级的 Serverlet 容器，没有实现全部 JEE 特性（比如持久化和事务处理），但可以通过其他组件代替，比如Spring。
 	* Jboss 实现全部了JEE特性，软件开源免费、文档收费。
 
 #### 调优方案
@@ -1533,7 +1539,7 @@ MyISAM 是非聚集，InnoDB 是聚集
 
 * [《邪恶的JAVA HASH DOS攻击》](http://www.freebuf.com/articles/web/14199.html)
 	* 利用JsonObjet 上传大Json，JsonObject 底层使用HashMap；不同的数据产生相同的hash值，使得构建Hash速度变慢，耗尽CPU。
-* [《一种高级的DoS攻击-Hash碰撞攻击》](https://yq.aliyun.com/articles/92194?t=t1)
+* [《一种高级的DoS攻击-Hash碰撞攻击》](http://blog.it2048.cn/article_hash-collision.html )
 * [《关于Hash Collision DoS漏洞：解析与解决方案》](http://www.iteye.com/news/23939/)
 
 ### 脚本注入
@@ -1814,7 +1820,7 @@ TODO
 * [《JVM安全退出（如何优雅的关闭java服务）》](https://blog.csdn.net/u011001084/article/details/73480432)
 推荐推出方式：System.exit，Kill SIGTERM；不推荐 kill-9；用 Runtime.addShutdownHook 注册钩子。
 * [《常见Java应用如何优雅关闭》](http://ju.outofmemory.cn/entry/337235)
-Java、Srping、Dubbo 优雅关闭方式。
+Java、Spring、Dubbo 优雅关闭方式。
 
 ## 数据库扩展
 
@@ -2428,5 +2434,7 @@ TODO
 
 ### VPS
 * [Linode](http://linode.com)
+* [DigitalOcean](https://www.digitalocean.com)
+* [Vultr](https://www.vultr.com/)
 
 
